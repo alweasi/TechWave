@@ -1,0 +1,139 @@
+/* Global styles  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(25deg, #f7e93f, #fb09b4, #9100f8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.secondary_btn {
+  background: #00000000;
+  border: 2px solid #00ff88;
+  color: #00ff88;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  size: 16px;
+  font-weight: 500;
+}
+
+/* Header styles  */
+
+header {
+  background: #1a0b2e;
+}
+
+nav {
+  padding-block: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_items {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+/* Hero styles  */
+
+#hero {
+  background-image: url(./assets/hero-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .img_box {
+    min-height: 500px;
+    position: relative;
+
+    .circle_img {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .mic_img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .badge_img {
+      position: absolute;
+      top: 63px;
+      right: 35%;
+      animation: jump 2s ease-in-out infinite;
+    }
+  }
+
+  .hero_content {
+    padding-block: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 800;
+    }
+    p {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .button {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateZ(-5px) scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+  }
+}
